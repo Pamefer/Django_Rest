@@ -1,6 +1,7 @@
 from django.forms import widgets
 from rest_framework import serializers
 from escuela.models import Materia, LANGUAGE_CHOICES, STYLE_CHOICES
+from escuela.models import Estudiante, LANGUAGE_CHOICES, STYLE_CHOICES
 
 
 # class MateriaSerializer(serializers.Serializer):
@@ -34,3 +35,8 @@ class MateriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Materia
         fields = ('id', 'title', 'code', 'linenos', 'language', 'style')
+
+class EstudianteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Estudiante
+        fields = ('nombre', 'apellido', 'cedula', 'ciudad', 'provincia')

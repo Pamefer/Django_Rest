@@ -11,8 +11,10 @@ from escuela import views
 # urlpatterns = format_suffix_patterns(urlpatterns)
 
 urlpatterns = [
-    url(r'^snippets/$', views.MateriaList.as_view()),
-    url(r'^snippets/(?P<pk>[0-9]+)/$', views.MateriaDetail.as_view()),
+    # url(r'^snippets/$', views.MateriaList.as_view()),
+    # url(r'^snippets/(?P<pk>[0-9]+)/$', views.MateriaDetail.as_view()),
+    url(r'^snippets/$', views.EstudianteList.as_view()),
+    url(r'^snippets/(?P<pk>[0-9]+)/$', views.EstudianteDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

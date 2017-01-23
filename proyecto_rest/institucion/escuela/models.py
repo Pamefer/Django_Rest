@@ -17,3 +17,18 @@ class Materia(models.Model):
 
     class Meta:
         ordering = ('created',)
+
+
+class Estudiante(models.Model):
+    nombre = models.CharField(max_length=100, blank=True)
+    apellido = models.CharField(max_length=100, blank=True)
+    cedula = models.CharField(max_length=100, blank=True)
+    ciudad = models.CharField(max_length=100, blank=True)
+    provincia = models.CharField(max_length=100, blank=True)
+
+    class Meta:
+        ordering = ('nombre',)
+
+    def __str__(self):
+        return '%s' % (self.nombre)
+
